@@ -1,0 +1,1 @@
+ALTER TABLE "student_profiles" ADD COLUMN "assessment_count" integer DEFAULT 0 NOT NULL;

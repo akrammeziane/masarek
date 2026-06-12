@@ -1,0 +1,1682 @@
+[
+  {
+    "code": "A00CAN12",
+    "name_fr": "École Nationale Supérieure des Énergies Renouvelables, de l'Environnement et du Développement Durable (Batna)"
+  },
+  {
+    "code": "A00LAL01",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00LAL02",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00LAL03",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00LAL04",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00LAL05",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00TCL01",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00TCL02",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00TCL03",
+    "name_fr": "Sciences et Technologies"
+  },
+  {
+    "code": "A00TUT01",
+    "name_fr": "Technologies de l'Information, de la Communication et de la Poste"
+  },
+  {
+    "code": "A00TUT02",
+    "name_fr": "Communications Filaires et Sans Fil, Télécommunications et Technologies des TIC"
+  },
+  {
+    "code": "A01LAN01",
+    "name_fr": "Génie Minier"
+  },
+  {
+    "code": "A01LAN02",
+    "name_fr": "Génie Minier"
+  },
+  {
+    "code": "A02EPN01",
+    "name_fr": "Automatique (À distance)"
+  },
+  {
+    "code": "A02IAN01",
+    "name_fr": "Automatique"
+  },
+  {
+    "code": "A02LAN01",
+    "name_fr": "Automatique (Systèmes Automobiles)"
+  },
+  {
+    "code": "A02TPN01",
+    "name_fr": "Automatique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A03FPN02",
+    "name_fr": "Hydrocarbures (Forage) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A03FPN03",
+    "name_fr": "Hydrocarbures (Mécanique des Chantiers Pétroliers) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A03LAN01",
+    "name_fr": "Hydrocarbures"
+  },
+  {
+    "code": "A03LAN02",
+    "name_fr": "Hydrocarbures"
+  },
+  {
+    "code": "A04LAL01",
+    "name_fr": "Métallurgie"
+  },
+  {
+    "code": "A04LAL02",
+    "name_fr": "Métallurgie"
+  },
+  {
+    "code": "A05IAN01",
+    "name_fr": "Génie Civil (Constructions Civiles et Environnement)"
+  },
+  {
+    "code": "A05IAN02",
+    "name_fr": "Génie Civil (Voirie et Réseaux Divers)"
+  },
+  {
+    "code": "A05PSL01",
+    "name_fr": "Technique (P.E.S) Option : Génie Civil (Adrar)"
+  },
+  {
+    "code": "A05TCL01",
+    "name_fr": "Génie Civil"
+  },
+  {
+    "code": "A05TCL02",
+    "name_fr": "Génie Civil"
+  },
+  {
+    "code": "A05TPN02",
+    "name_fr": "Génie Civil (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A06IAN01",
+    "name_fr": "Aéronautique"
+  },
+  {
+    "code": "A06LAN01",
+    "name_fr": "Aéronautique"
+  },
+  {
+    "code": "A07IAN01",
+    "name_fr": "Électromécanique"
+  },
+  {
+    "code": "A07IAN02",
+    "name_fr": "Électromécanique"
+  },
+  {
+    "code": "A07LAN01",
+    "name_fr": "Électromécanique (Électromécanique d'Automobile)"
+  },
+  {
+    "code": "A07TPN01",
+    "name_fr": "Électromécanique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A08FPN01",
+    "name_fr": "Génie des Procédés (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A08IAN01",
+    "name_fr": "Génie des Procédés"
+  },
+  {
+    "code": "A08IAN02",
+    "name_fr": "Génie des Procédés"
+  },
+  {
+    "code": "A08PSL01",
+    "name_fr": "Technique (P.E.S) Option : Génie des Procédés"
+  },
+  {
+    "code": "A08TCL01",
+    "name_fr": "Génie des Procédés"
+  },
+  {
+    "code": "A08TCL02",
+    "name_fr": "Génie des Procédés"
+  },
+  {
+    "code": "A08TPN01",
+    "name_fr": "Génie des Procédés (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A09FPN01",
+    "name_fr": "Énergies Renouvelables (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A09FPN02",
+    "name_fr": "Énergies Renouvelables (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A09FPN03",
+    "name_fr": "Énergies Renouvelables (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A09IAN01",
+    "name_fr": "Électrotechnique"
+  },
+  {
+    "code": "A09IAN02",
+    "name_fr": "Énergies Renouvelables (Conversion Thermique)"
+  },
+  {
+    "code": "A09IAN03",
+    "name_fr": "Énergies Renouvelables (Conversion Photovoltaïque)"
+  },
+  {
+    "code": "A09IAN04",
+    "name_fr": "Électrotechnique"
+  },
+  {
+    "code": "A10LAN01",
+    "name_fr": "Génie Maritime"
+  },
+  {
+    "code": "A11FPN01",
+    "name_fr": "Optique et Mécanique de Précision (Optométrie) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A11FPN02",
+    "name_fr": "Optique et Mécanique de Précision (Métrologie et Contrôle Industriel) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A11IAN03",
+    "name_fr": "Optique et Mécanique"
+  },
+  {
+    "code": "A11LAN01",
+    "name_fr": "Optique et Mécanique"
+  },
+  {
+    "code": "A11TPN01",
+    "name_fr": "Optique et Mécanique de Précision (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A11TPN02",
+    "name_fr": "Optique et Mécanique de Précision (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A11TPN03",
+    "name_fr": "Optique et Mécanique de Précision (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A11TPN04",
+    "name_fr": "Optique et Mécanique de Précision (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A12FPN01",
+    "name_fr": "Hydraulique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A12LAL01",
+    "name_fr": "Hydraulique"
+  },
+  {
+    "code": "A12LAL02",
+    "name_fr": "Hydraulique"
+  },
+  {
+    "code": "A12LAL03",
+    "name_fr": "Hydraulique"
+  },
+  {
+    "code": "A12TPN01",
+    "name_fr": "Hydraulique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A13IAN01",
+    "name_fr": "Industries Pétrochimiques"
+  },
+  {
+    "code": "A13LAN01",
+    "name_fr": "Industries Pétrochimiques"
+  },
+  {
+    "code": "A14FPN01",
+    "name_fr": "Ingénierie des Transports (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A14FPN02",
+    "name_fr": "Ingénierie des Transports (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A14LAN01",
+    "name_fr": "Ingénierie des Transports"
+  },
+  {
+    "code": "A15IAN01",
+    "name_fr": "Travaux Publics"
+  },
+  {
+    "code": "A16FPN01",
+    "name_fr": "Électrotechnique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A16FPN02",
+    "name_fr": "Électrotechnique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A16IAN01",
+    "name_fr": "Électrotechnique"
+  },
+  {
+    "code": "A16LAN01",
+    "name_fr": "Électrotechnique (Énergies Renouvelables)"
+  },
+  {
+    "code": "A16PSL01",
+    "name_fr": "Technique (P.E.S) Option : Génie Électrique"
+  },
+  {
+    "code": "A16TCL01",
+    "name_fr": "Électrotechnique"
+  },
+  {
+    "code": "A17IAN01",
+    "name_fr": "Électronique"
+  },
+  {
+    "code": "A17IAN02",
+    "name_fr": "Électronique (Systèmes Électroniques Autonomes et Intelligence Artificielle)"
+  },
+  {
+    "code": "A17LAN01",
+    "name_fr": "Électronique (Enseignement en Langue Anglaise)"
+  },
+  {
+    "code": "A17LAN02",
+    "name_fr": "Électronique (Systèmes Électroniques Automobiles)"
+  },
+  {
+    "code": "A18IAN01",
+    "name_fr": "Génie Industriel"
+  },
+  {
+    "code": "A18LAN01",
+    "name_fr": "Génie Industriel"
+  },
+  {
+    "code": "A18TPN03",
+    "name_fr": "Génie Industriel (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A18TPN04",
+    "name_fr": "Génie Industriel (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A19FPN01",
+    "name_fr": "Génie Mécanique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A19FPN02",
+    "name_fr": "Génie Mécanique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A19FPN03",
+    "name_fr": "Génie Mécanique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A19LAN01",
+    "name_fr": "Génie Mécanique (Ingénierie de Construction Automobile)"
+  },
+  {
+    "code": "A19LAN02",
+    "name_fr": "Génie Mécanique (Technologie Automobile)"
+  },
+  {
+    "code": "A19PSL01",
+    "name_fr": "Technique (P.E.S) Option : Génie Mécanique"
+  },
+  {
+    "code": "A19TCL01",
+    "name_fr": "Génie Mécanique"
+  },
+  {
+    "code": "A19TPN01",
+    "name_fr": "Génie Mécanique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A19TPN03",
+    "name_fr": "Génie Mécanique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A20IAN01",
+    "name_fr": "Télécommunications"
+  },
+  {
+    "code": "A20TPN01",
+    "name_fr": "Télécommunications (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A21FPN01",
+    "name_fr": "Hygiène et Sécurité Industrielle (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A21IAN01",
+    "name_fr": "Hygiène et Sécurité Industrielle"
+  },
+  {
+    "code": "A21LAN01",
+    "name_fr": "Hygiène et Sécurité Industrielle"
+  },
+  {
+    "code": "A21TPN01",
+    "name_fr": "Hygiène et Sécurité Industrielle (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A21TPN02",
+    "name_fr": "Hygiène et Sécurité Industrielle (Formations Professionnalisantes)"
+  },
+  {
+    "code": "A22FPN01",
+    "name_fr": "Génie Biomédical (Formations Professionnalisantes)"
+  },
+  {
+    "code": "B00LAL01",
+    "name_fr": "Sciences de la Matière"
+  },
+  {
+    "code": "B00LAL02",
+    "name_fr": "Sciences de la Matière"
+  },
+  {
+    "code": "B00LAL03",
+    "name_fr": "Sciences de la Matière"
+  },
+  {
+    "code": "B00PML01",
+    "name_fr": "Sciences Physiques et Technologie (P.E.M.)"
+  },
+  {
+    "code": "B00PSL01",
+    "name_fr": "Sciences Physiques (P.E.S.)"
+  },
+  {
+    "code": "B01IPN01",
+    "name_fr": "Chimie"
+  },
+  {
+    "code": "B02FPN01",
+    "name_fr": "Physique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "B02IPN01",
+    "name_fr": "Physique"
+  },
+  {
+    "code": "B02TPN01",
+    "name_fr": "Physique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "B02TPN02",
+    "name_fr": "Physique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "C00CAN01",
+    "name_fr": "École Nationale Supérieure en Informatique (ESI - Alger)"
+  },
+  {
+    "code": "C00CAN02",
+    "name_fr": "École Supérieure en Informatique (ESI - Sidi Bel Abbès)"
+  },
+  {
+    "code": "C00CAN03",
+    "name_fr": "École Supérieure en Sciences et Technologies de l'Informatique et du Numérique (ESTIN - Béjaïa)"
+  },
+  {
+    "code": "C00CAN04",
+    "name_fr": "École Nationale Supérieure en Intelligence Artificielle (ENSIA - Alger)"
+  },
+  {
+    "code": "C00CAN05",
+    "name_fr": "École Nationale Supérieure en Mathématiques (ENSM - Alger)"
+  },
+  {
+    "code": "C00CAN06",
+    "name_fr": "École Nationale Supérieure des Technologies Avancées (ENSTA - Alger)"
+  },
+  {
+    "code": "C00CAN07",
+    "name_fr": "École Nationale Supérieure de Cyber Sécurité (ENSCS - Alger)"
+  },
+  {
+    "code": "C01EPN01",
+    "name_fr": "Informatique (À distance)"
+  },
+  {
+    "code": "C01FPN02",
+    "name_fr": "Informatique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "C01FPN03",
+    "name_fr": "Informatique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "C01LAL01",
+    "name_fr": "Informatique"
+  },
+  {
+    "code": "C01LAL02",
+    "name_fr": "Informatique"
+  },
+  {
+    "code": "C01LAL03",
+    "name_fr": "Informatique"
+  },
+  {
+    "code": "C01PML01",
+    "name_fr": "Informatique (P.E.M.)"
+  },
+  {
+    "code": "C01PSL01",
+    "name_fr": "Informatique (P.E.S.)"
+  },
+  {
+    "code": "C01TCL01",
+    "name_fr": "Informatique"
+  },
+  {
+    "code": "C01TCL02",
+    "name_fr": "Informatique"
+  },
+  {
+    "code": "C01TCL03",
+    "name_fr": "Informatique"
+  },
+  {
+    "code": "C02FPN01",
+    "name_fr": "Mathématiques (Formations Professionnalisantes)"
+  },
+  {
+    "code": "C02LAL01",
+    "name_fr": "Mathématiques"
+  },
+  {
+    "code": "C02LAL02",
+    "name_fr": "Mathématiques"
+  },
+  {
+    "code": "C02LAL03",
+    "name_fr": "Mathématiques"
+  },
+  {
+    "code": "C02PML01",
+    "name_fr": "Mathématiques (P.E.M.)"
+  },
+  {
+    "code": "C02PSL01",
+    "name_fr": "Mathématiques (P.E.S.)"
+  },
+  {
+    "code": "C03FPN01",
+    "name_fr": "Mathématiques Appliquées (Formations Professionnalisantes)"
+  },
+  {
+    "code": "C03IAN01",
+    "name_fr": "Mathématiques Appliquées"
+  },
+  {
+    "code": "CA0LAN01",
+    "name_fr": "Informatique + Automatique"
+  },
+  {
+    "code": "CC1LAN01",
+    "name_fr": "Mathématiques Appliquées en Intelligence Artificielle et Sciences des Données"
+  },
+  {
+    "code": "CF0LAN01",
+    "name_fr": "Mathématiques Appliquées + Sciences Économiques"
+  },
+  {
+    "code": "CF0LAN02",
+    "name_fr": "Informatique + Sciences"
+  },
+  {
+    "code": "CF0LAN03",
+    "name_fr": "Mathématiques Appliquées + Sciences Économiques"
+  },
+  {
+    "code": "CF0LAN04",
+    "name_fr": "Mathématiques Appliquées + Sciences Économiques"
+  },
+  {
+    "code": "CF0LAN05",
+    "name_fr": "Informatique + Sciences Économiques"
+  },
+  {
+    "code": "CF0LAN06",
+    "name_fr": "Mathématiques Appliquées + Sciences Économiques"
+  },
+  {
+    "code": "CF1LPN01",
+    "name_fr": "Mathématiques et Informatique Appliquées aux Sciences Économiques et de Gestion"
+  },
+  {
+    "code": "CF1LPN02",
+    "name_fr": "Mathématiques et Informatique Appliquées aux Sciences Économiques et de Gestion"
+  },
+  {
+    "code": "CF1LPN03",
+    "name_fr": "Mathématiques et Informatique Appliquées aux Sciences Économiques et de Gestion"
+  },
+  {
+    "code": "CI1LPN01",
+    "name_fr": "Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales"
+  },
+  {
+    "code": "CI1LPN02",
+    "name_fr": "Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales"
+  },
+  {
+    "code": "CI1LPN03",
+    "name_fr": "Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales"
+  },
+  {
+    "code": "D00CAN05",
+    "name_fr": "École Supérieure des Sciences de l'Aliment et des Industries Agroalimentaires (ESSAIA - Alger)"
+  },
+  {
+    "code": "D00CAN06",
+    "name_fr": "École Supérieure Agronomique de Mostaganem (ESAM)"
+  },
+  {
+    "code": "D00CAN07",
+    "name_fr": "École Nationale Supérieure Agronomique (ENSA - Alger)"
+  },
+  {
+    "code": "D00CAN08",
+    "name_fr": "École Supérieure des Sciences Biologiques d'Oran (ESSBO)"
+  },
+  {
+    "code": "D00CAN09",
+    "name_fr": "École Nationale Supérieure des Forêts (ENSF - Batna)"
+  },
+  {
+    "code": "D00LAL01",
+    "name_fr": "Sciences de la Nature et de la Vie (SNV)"
+  },
+  {
+    "code": "D00LAL02",
+    "name_fr": "Sciences de la Nature et de la Vie (SNV)"
+  },
+  {
+    "code": "D00LAL03",
+    "name_fr": "Sciences de la Nature et de la Vie (SNV)"
+  },
+  {
+    "code": "D00LAL04",
+    "name_fr": "Sciences de la Nature et de la Vie (SNV)"
+  },
+  {
+    "code": "D00PML01",
+    "name_fr": "Sciences Naturelles (P.E.M.)"
+  },
+  {
+    "code": "D00PSL01",
+    "name_fr": "Sciences Naturelles (P.E.S.)"
+  },
+  {
+    "code": "D02IAN01",
+    "name_fr": "Sciences Biologiques"
+  },
+  {
+    "code": "D03FPN02",
+    "name_fr": "Sciences Agronomiques (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D03LAN01",
+    "name_fr": "Sciences Agronomiques"
+  },
+  {
+    "code": "D03LAN02",
+    "name_fr": "Sciences Agronomiques"
+  },
+  {
+    "code": "D03TCL01",
+    "name_fr": "Sciences Agronomiques"
+  },
+  {
+    "code": "D05FPN01",
+    "name_fr": "Hydrobiologie Marine et Continentale (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D06FPN01",
+    "name_fr": "Écologie et Environnement (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D07FPN01",
+    "name_fr": "Sciences Alimentaires (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D07FPN02",
+    "name_fr": "Sciences Alimentaires (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D07IAN01",
+    "name_fr": "Sciences Alimentaires"
+  },
+  {
+    "code": "D07LAN01",
+    "name_fr": "Sciences Alimentaires"
+  },
+  {
+    "code": "D07TPN02",
+    "name_fr": "Sciences Alimentaires (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D07TPN03",
+    "name_fr": "Sciences Alimentaires (Formations Professionnalisantes)"
+  },
+  {
+    "code": "D07TPN04",
+    "name_fr": "Sciences Alimentaires (Contrôle et Management de la Qualité en Industries Agroalimentaires) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "E01FPN01",
+    "name_fr": "Géographie et Aménagement du Territoire (Formations Professionnalisantes)"
+  },
+  {
+    "code": "E01FPN02",
+    "name_fr": "Géographie et Aménagement du Territoire (Formations Professionnalisantes)"
+  },
+  {
+    "code": "E01LAL01",
+    "name_fr": "Géographie et Aménagement du Territoire"
+  },
+  {
+    "code": "E01LAL02",
+    "name_fr": "Géographie et Aménagement du Territoire"
+  },
+  {
+    "code": "E02FPN01",
+    "name_fr": "Géophysique (Formations Professionnalisantes)"
+  },
+  {
+    "code": "E02LAL01",
+    "name_fr": "Géophysique"
+  },
+  {
+    "code": "E02LAL02",
+    "name_fr": "Géophysique"
+  },
+  {
+    "code": "E03LAL01",
+    "name_fr": "Géologie"
+  },
+  {
+    "code": "E03LAL02",
+    "name_fr": "Géologie"
+  },
+  {
+    "code": "E03LAL03",
+    "name_fr": "Géologie"
+  },
+  {
+    "code": "F00CAN01",
+    "name_fr": "École Supérieure des Sciences de Management d'Annaba"
+  },
+  {
+    "code": "F00CAN02",
+    "name_fr": "École Supérieure de Comptabilité et de Finance de Constantine"
+  },
+  {
+    "code": "F00CAN03",
+    "name_fr": "École Supérieure de Management de Tlemcen"
+  },
+  {
+    "code": "F00CAN04",
+    "name_fr": "École Supérieure d'Économie d'Oran"
+  },
+  {
+    "code": "F00CAN05",
+    "name_fr": "École Supérieure de Commerce (Kolea)"
+  },
+  {
+    "code": "F00CAN06",
+    "name_fr": "École des Hautes Études Commerciales (EHEC - Kolea)"
+  },
+  {
+    "code": "F00CAN07",
+    "name_fr": "École Nationale Supérieure de Statistique et d'Économie Appliquée (ENSSEA - Kolea)"
+  },
+  {
+    "code": "F00CAN08",
+    "name_fr": "École Nationale Supérieure de Management et d'Économie Numérique (ENS MEN - Kolea)"
+  },
+  {
+    "code": "F00FCL01",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue)"
+  },
+  {
+    "code": "F00FCL02",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue)"
+  },
+  {
+    "code": "F00FCL03",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue - Bab Ezzouar)"
+  },
+  {
+    "code": "F00FCL04",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue - Ben Aknoun)"
+  },
+  {
+    "code": "F00FCL05",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue - Bouzaréah)"
+  },
+  {
+    "code": "F00FCL06",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue - Alger Centre)"
+  },
+  {
+    "code": "F00FCL07",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales (Formation Continue - El Kharrouba)"
+  },
+  {
+    "code": "F00LAL01",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales"
+  },
+  {
+    "code": "F00LAL02",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales"
+  },
+  {
+    "code": "F00LAL03",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales"
+  },
+  {
+    "code": "F00LAL04",
+    "name_fr": "Sciences Économiques, de Gestion et Commerciales"
+  },
+  {
+    "code": "F00PSL01",
+    "name_fr": "Sciences Économiques (P.E.S.)"
+  },
+  {
+    "code": "F00TPN02",
+    "name_fr": "Sciences de Gestion, Sciences Financières et Comptabilité (Formations Professionnalisantes)"
+  },
+  {
+    "code": "F00TPN03",
+    "name_fr": "Sciences de Gestion, Sciences Financières et Comptabilité (Formations Professionnalisantes)"
+  },
+  {
+    "code": "F01FPN01",
+    "name_fr": "Sciences de Gestion (Formations Professionnalisantes)"
+  },
+  {
+    "code": "F01FPN02",
+    "name_fr": "Sciences de Gestion"
+  },
+  {
+    "code": "F01LPL01",
+    "name_fr": "Management des Systèmes d'Information"
+  },
+  {
+    "code": "F01LPN01",
+    "name_fr": "Management des Aéroports et du Transit"
+  },
+  {
+    "code": "F02FPN01",
+    "name_fr": "Sciences Financières et Comptabilité"
+  },
+  {
+    "code": "F02LAL01",
+    "name_fr": "Négociation et Technologie Financière"
+  },
+  {
+    "code": "F03FPN02",
+    "name_fr": "Sciences Commerciales (Formations Professionnalisantes)"
+  },
+  {
+    "code": "F03LPL01",
+    "name_fr": "Communication Marketing et Gestion de la Relation Client"
+  },
+  {
+    "code": "F03LPL02",
+    "name_fr": "Management Électronique des Affaires"
+  },
+  {
+    "code": "F04EAN01",
+    "name_fr": "Sciences Économiques (À distance)"
+  },
+  {
+    "code": "F04EAN03",
+    "name_fr": "Sciences Économiques (À distance)"
+  },
+  {
+    "code": "F04LAL01",
+    "name_fr": "Trading et Marchés Financiers"
+  },
+  {
+    "code": "FC1LAN01",
+    "name_fr": "Gestion des Opérations Commerciales Électroniques"
+  },
+  {
+    "code": "FC1LAN02",
+    "name_fr": "Management et Informatique"
+  },
+  {
+    "code": "FC1LPN01",
+    "name_fr": "Économie Quantitative et Informatique"
+  },
+  {
+    "code": "FC1LPN02",
+    "name_fr": "Économie et Relations Internationales"
+  },
+  {
+    "code": "FC1LPN03",
+    "name_fr": "Intelligence Artificielle en Économie Appliquée"
+  },
+  {
+    "code": "FF1LAN01",
+    "name_fr": "Business Computing (Informatique des Affaires)"
+  },
+  {
+    "code": "FF1LAN02",
+    "name_fr": "Ingénierie Financière"
+  },
+  {
+    "code": "FH0LAN01",
+    "name_fr": "Sciences de Gestion + Langue Anglaise"
+  },
+  {
+    "code": "FI1LAN01",
+    "name_fr": "Santé et Protection Sociale"
+  },
+  {
+    "code": "G01LAL01",
+    "name_fr": "Sciences Politiques"
+  },
+  {
+    "code": "G01LAL02",
+    "name_fr": "Sciences Politiques"
+  },
+  {
+    "code": "G01LAL03",
+    "name_fr": "Sciences Politiques"
+  },
+  {
+    "code": "G01LAN01",
+    "name_fr": "Sciences Politiques"
+  },
+  {
+    "code": "G02FCL01",
+    "name_fr": "Droit (Formation Continue)"
+  },
+  {
+    "code": "G02FCL02",
+    "name_fr": "Droit (Formation Continue)"
+  },
+  {
+    "code": "G02FCL03",
+    "name_fr": "Droit (Formation Continue - Bab Ezzouar)"
+  },
+  {
+    "code": "G02FCL04",
+    "name_fr": "Droit (Formation Continue - Ben Aknoun)"
+  },
+  {
+    "code": "G02FCL05",
+    "name_fr": "Droit (Formation Continue - Bouzaréah)"
+  },
+  {
+    "code": "G02FCL06",
+    "name_fr": "Droit (Formation Continue - Alger Centre)"
+  },
+  {
+    "code": "G02FCL07",
+    "name_fr": "Droit (Formation Continue - El Kharrouba)"
+  },
+  {
+    "code": "G02LAL01",
+    "name_fr": "Droit"
+  },
+  {
+    "code": "G02LAL02",
+    "name_fr": "Droit"
+  },
+  {
+    "code": "G02LAL03",
+    "name_fr": "Droit"
+  },
+  {
+    "code": "G02LAN01",
+    "name_fr": "Droit"
+  },
+  {
+    "code": "GC0LAN01",
+    "name_fr": "Droit + Informatique"
+  },
+  {
+    "code": "GC0LAN02",
+    "name_fr": "Informatique + Droit"
+  },
+  {
+    "code": "GF0LAN01",
+    "name_fr": "Droit + Sciences Financières et Comptabilité"
+  },
+  {
+    "code": "GG0LAN01",
+    "name_fr": "Droit + Sciences Politiques"
+  },
+  {
+    "code": "GG0LAN02",
+    "name_fr": "Droit + Sciences Politiques"
+  },
+  {
+    "code": "GG1LAN01",
+    "name_fr": "Études Politiques et Innovation Publique"
+  },
+  {
+    "code": "GH0LAN01",
+    "name_fr": "Sciences Politiques + Langue Anglaise"
+  },
+  {
+    "code": "H01LAL01",
+    "name_fr": "Langue Française"
+  },
+  {
+    "code": "H01LAL02",
+    "name_fr": "Langue Française"
+  },
+  {
+    "code": "H01LAL03",
+    "name_fr": "Langue Française"
+  },
+  {
+    "code": "H01PML01",
+    "name_fr": "Langue Française (P.E.M.)"
+  },
+  {
+    "code": "H01PPL01",
+    "name_fr": "Français (P.E.P.)"
+  },
+  {
+    "code": "H01PSL01",
+    "name_fr": "Langue Française (P.E.S.)"
+  },
+  {
+    "code": "H02LAL01",
+    "name_fr": "Langue Espagnole"
+  },
+  {
+    "code": "H02PSN01",
+    "name_fr": "Langue Espagnole (Professeur de l'Enseignement Secondaire - Oran)"
+  },
+  {
+    "code": "H03IAL01",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL02",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL03",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL04",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL05",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL09",
+    "name_fr": "Traduction / Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL10",
+    "name_fr": "Traduction / Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL13",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL14",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL15",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL16",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL17",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL18",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL19",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL20",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL21",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL22",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL23",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL24",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL25",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAL26",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Anglais)"
+  },
+  {
+    "code": "H03IAN07",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Espagnol)"
+  },
+  {
+    "code": "H03IAN08",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Espagnol)"
+  },
+  {
+    "code": "H03IAN11",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Amazigh)"
+  },
+  {
+    "code": "H03IAN12",
+    "name_fr": "Traduction et Interprétariat (Arabe, Français, Amazigh)"
+  },
+  {
+    "code": "H04LAL01",
+    "name_fr": "Langue Allemande"
+  },
+  {
+    "code": "H04PSN01",
+    "name_fr": "Langue Allemande (Professeur de l'Enseignement Secondaire - Oran)"
+  },
+  {
+    "code": "H05LAL01",
+    "name_fr": "Langue Russe"
+  },
+  {
+    "code": "H06EAN01",
+    "name_fr": "Langue Anglaise (À distance)"
+  },
+  {
+    "code": "H06FCL02",
+    "name_fr": "Anglais Technique (Formation Continue - Alger Centre)"
+  },
+  {
+    "code": "H06FCL03",
+    "name_fr": "Anglais Technique (Formation Continue - Bouzaréah)"
+  },
+  {
+    "code": "H06FCL04",
+    "name_fr": "Anglais Technique (Formation Continue - El Kharrouba)"
+  },
+  {
+    "code": "H06FCL05",
+    "name_fr": "Anglais Technique (Formation Continue)"
+  },
+  {
+    "code": "H06LAL01",
+    "name_fr": "Langue Anglaise"
+  },
+  {
+    "code": "H06LAL02",
+    "name_fr": "Langue Anglaise"
+  },
+  {
+    "code": "H06LAL03",
+    "name_fr": "Langue Anglaise"
+  },
+  {
+    "code": "H06PML01",
+    "name_fr": "Langue Anglaise (P.E.M.)"
+  },
+  {
+    "code": "H06PPL01",
+    "name_fr": "Langue Anglaise (P.E.P.)"
+  },
+  {
+    "code": "H06PSL01",
+    "name_fr": "Langue Anglaise (P.E.S.)"
+  },
+  {
+    "code": "H07LAL01",
+    "name_fr": "Langue Italienne"
+  },
+  {
+    "code": "H07PSN01",
+    "name_fr": "Langue Italienne (Professeur de l'Enseignement Secondaire)"
+  },
+  {
+    "code": "H08LAL01",
+    "name_fr": "Langue Turque"
+  },
+  {
+    "code": "H09LAL01",
+    "name_fr": "Langue Chinoise"
+  },
+  {
+    "code": "HF0LAN01",
+    "name_fr": "Langue Anglaise + Sciences Financières et Comptabilité"
+  },
+  {
+    "code": "HG0LAN01",
+    "name_fr": "Langue Anglaise + Sciences Politiques"
+  },
+  {
+    "code": "I00PML01",
+    "name_fr": "Histoire et Géographie (P.E.M.)"
+  },
+  {
+    "code": "I00PSL01",
+    "name_fr": "Histoire et Géographie (P.E.S.)"
+  },
+  {
+    "code": "I02PSL01",
+    "name_fr": "Sciences Islamiques"
+  },
+  {
+    "code": "I03FCL01",
+    "name_fr": "Sciences Humaines (Formation Continue)"
+  },
+  {
+    "code": "I03FCL02",
+    "name_fr": "Sciences Humaines (Formation Continue - Alger Centre)"
+  },
+  {
+    "code": "I03FCL03",
+    "name_fr": "Sciences Humaines (Formation Continue - Bouzaréah)"
+  },
+  {
+    "code": "I03FPN01",
+    "name_fr": "Sciences de l'Information et de la Communication (Formations Professionnalisantes)"
+  },
+  {
+    "code": "I03LAL01",
+    "name_fr": "Information et Communication de la Santé"
+  },
+  {
+    "code": "I03LAN01",
+    "name_fr": "Sciences Humaines, Sciences de l'Information et de la Communication"
+  },
+  {
+    "code": "I03LAN02",
+    "name_fr": "Sciences Humaines, Sciences de l'Information et de la Communication"
+  },
+  {
+    "code": "I04LAL01",
+    "name_fr": "Histoire et Big Data"
+  },
+  {
+    "code": "I10LAL01",
+    "name_fr": "Sociologie du Loisir et du Voyage"
+  },
+  {
+    "code": "I12LAN01",
+    "name_fr": "Sciences Humaines, Archéologie"
+  },
+  {
+    "code": "I13PSL01",
+    "name_fr": "Philosophie (P.E.S.)"
+  },
+  {
+    "code": "I14LAN01",
+    "name_fr": "Sciences Humaines, Bibliothéconomie"
+  },
+  {
+    "code": "I14LAN02",
+    "name_fr": "Sciences Humaines, Bibliothéconomie"
+  },
+  {
+    "code": "I17LAL01",
+    "name_fr": "Sciences Humaines"
+  },
+  {
+    "code": "I17LAL02",
+    "name_fr": "Sciences Humaines"
+  },
+  {
+    "code": "I17LAL03",
+    "name_fr": "Sciences Humaines"
+  },
+  {
+    "code": "I19LAL01",
+    "name_fr": "Sciences Sociales"
+  },
+  {
+    "code": "I19LAL02",
+    "name_fr": "Sciences Sociales"
+  },
+  {
+    "code": "I19LAL03",
+    "name_fr": "Sciences Sociales"
+  },
+  {
+    "code": "I20LAL01",
+    "name_fr": "Sciences Islamiques"
+  },
+  {
+    "code": "I20LAL02",
+    "name_fr": "Sciences Islamiques"
+  },
+  {
+    "code": "I20LAN01",
+    "name_fr": "Sciences Islamiques"
+  },
+  {
+    "code": "IC0LAN01",
+    "name_fr": "Informatique + Sciences de l'Information et de la Communication"
+  },
+  {
+    "code": "IF0LAN01",
+    "name_fr": "Sciences Économiques + Sciences de l'Information et de la Communication"
+  },
+  {
+    "code": "IF1LAN01",
+    "name_fr": "Communication Digitale et Management"
+  },
+  {
+    "code": "IG0LAN01",
+    "name_fr": "Sciences de l'Information et de la Communication + Sciences Politiques"
+  },
+  {
+    "code": "II1LAN01",
+    "name_fr": "Communication Touristique et Promotion Territoriale"
+  },
+  {
+    "code": "IJ0LAN01",
+    "name_fr": "Sciences de l'Information et de la Communication + Entraînement Sportif"
+  },
+  {
+    "code": "IJ0LAN02",
+    "name_fr": "Entraînement Sportif + Sciences Sociales (Psychologie)"
+  },
+  {
+    "code": "J00LAL01",
+    "name_fr": "Sciences et Techniques des Activités Physiques et Sportives (STAPS)"
+  },
+  {
+    "code": "J00LAL02",
+    "name_fr": "Sciences et Techniques des Activités Physiques et Sportives (STAPS)"
+  },
+  {
+    "code": "J00LAN01",
+    "name_fr": "Sciences et Techniques des Activités Physiques et Sportives (STAPS)"
+  },
+  {
+    "code": "J00PML01",
+    "name_fr": "Éducation Physique et Sportive (P.E.M.)"
+  },
+  {
+    "code": "J00PPL01",
+    "name_fr": "Éducation Physique et Sportive (P.E.P.)"
+  },
+  {
+    "code": "J00PSL01",
+    "name_fr": "Éducation Physique et Sportive (P.E.S.)"
+  },
+  {
+    "code": "JI1LAN01",
+    "name_fr": "Éducation Psychomotrice en Période de l'Enfance"
+  },
+  {
+    "code": "K00LAL01",
+    "name_fr": "Arts"
+  },
+  {
+    "code": "K00LAN01",
+    "name_fr": "Arts"
+  },
+  {
+    "code": "K00PMN01",
+    "name_fr": "Musique (P.E.M.)"
+  },
+  {
+    "code": "K00PSN01",
+    "name_fr": "Musique (P.E.S.)"
+  },
+  {
+    "code": "K01LAL01",
+    "name_fr": "Écriture"
+  },
+  {
+    "code": "K01LPL01",
+    "name_fr": "Production et Design Numérique - Production de Contenu Numérique"
+  },
+  {
+    "code": "K01LPN01",
+    "name_fr": "Concepteur 3D Spécialisation Effets Spéciaux (VFX)"
+  },
+  {
+    "code": "K02LAN01",
+    "name_fr": "Musicien Interprète et Créateur"
+  },
+  {
+    "code": "K02LAN02",
+    "name_fr": "Comédien Professionnel et Auteur Dramatique"
+  },
+  {
+    "code": "KK1LAN01",
+    "name_fr": "Cinéma et Médias Numériques"
+  },
+  {
+    "code": "L00LAL01",
+    "name_fr": "Langue et Littérature Arabes"
+  },
+  {
+    "code": "L00LAL02",
+    "name_fr": "Langue et Littérature Arabes"
+  },
+  {
+    "code": "L00LAL03",
+    "name_fr": "Langue et Littérature Arabes"
+  },
+  {
+    "code": "L00PML01",
+    "name_fr": "Langue et Littérature Arabes (P.E.M.)"
+  },
+  {
+    "code": "L00PPL01",
+    "name_fr": "Langue Arabe (P.E.P.)"
+  },
+  {
+    "code": "L00PSL01",
+    "name_fr": "Langue et Littérature Arabes (P.E.S.)"
+  },
+  {
+    "code": "M00LAL01",
+    "name_fr": "Langue et Culture Amazighes"
+  },
+  {
+    "code": "M00PMN01",
+    "name_fr": "Langue Amazighe (P.E.M.)"
+  },
+  {
+    "code": "M00PPL01",
+    "name_fr": "Langue Amazighe (P.E.P.)"
+  },
+  {
+    "code": "M00PSN01",
+    "name_fr": "Langue Amazighe (P.E.S.)"
+  },
+  {
+    "code": "N00TUT01",
+    "name_fr": "Conservation et Restauration des Biens Culturels"
+  },
+  {
+    "code": "N01FPN02",
+    "name_fr": "Gestion des Techniques Urbaines (Génie Urbain) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N01FPN03",
+    "name_fr": "Gestion des Techniques Urbaines (Gestion des Villes) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N01FPN04",
+    "name_fr": "Gestion des Techniques Urbaines (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N01IAN01",
+    "name_fr": "Gestion des Techniques Urbaines"
+  },
+  {
+    "code": "N01LAL01",
+    "name_fr": "Gestion des Techniques Urbaines"
+  },
+  {
+    "code": "N02FPN01",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN02",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN03",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN04",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN05",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN06",
+    "name_fr": "Métiers de la Ville (Design et Architecture Intérieure) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN07",
+    "name_fr": "Métiers de la Ville (Infographie en Architecture) (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN08",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02FPN09",
+    "name_fr": "Management des Projets de Construction (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N02IAN01",
+    "name_fr": "Métiers de la Ville"
+  },
+  {
+    "code": "N02LAN01",
+    "name_fr": "Management des Projets"
+  },
+  {
+    "code": "N02TPN01",
+    "name_fr": "Métiers de la Ville : Géomètre Topographe (Formations Professionnalisantes)"
+  },
+  {
+    "code": "N04LAL01",
+    "name_fr": "Urbanisme"
+  },
+  {
+    "code": "N05IAL01",
+    "name_fr": "Architecture"
+  },
+  {
+    "code": "N05IAL02",
+    "name_fr": "Architecture"
+  },
+  {
+    "code": "NA0LAN01",
+    "name_fr": "Architecture + Génie Civil"
+  },
+  {
+    "code": "NI0LAN01",
+    "name_fr": "Architecture + Sciences Sociales (Sociologie)"
+  },
+  {
+    "code": "P01MAL01",
+    "name_fr": "Médecine"
+  },
+  {
+    "code": "P02MAL01",
+    "name_fr": "Pharmacie"
+  },
+  {
+    "code": "P03MAL01",
+    "name_fr": "Médecine Dentaire"
+  },
+  {
+    "code": "P04VAL01",
+    "name_fr": "Sciences Vétérinaires"
+  },
+  {
+    "code": "P04VAN01",
+    "name_fr": "Sciences Vétérinaires (Alger)"
+  },
+  {
+    "code": "P04VAN02",
+    "name_fr": "Sciences Vétérinaires"
+  },
+  {
+    "code": "P04VAN03",
+    "name_fr": "Sciences Vétérinaires"
+  },
+  {
+    "code": "P04VAN04",
+    "name_fr": "Sciences Vétérinaires"
+  },
+  {
+    "code": "P05LAN01",
+    "name_fr": "Pharmacie : Industrie des Produits Pharmaceutiques"
+  },
+  {
+    "code": "P06LAN01",
+    "name_fr": "Pharmacie : Auxiliaires en Pharmacie"
+  },
+  {
+    "code": "PC0LAN01",
+    "name_fr": "Médecine + Informatique"
+  },
+  {
+    "code": "PC0LAN02",
+    "name_fr": "Médecine + Informatique"
+  },
+  {
+    "code": "PC0LAN03",
+    "name_fr": "Médecine + Informatique"
+  },
+  {
+    "code": "PC0LAN04",
+    "name_fr": "Médecine + Informatique"
+  },
+  {
+    "code": "PC0LAN05",
+    "name_fr": "Médecine + Informatique"
+  },
+  {
+    "code": "PD0LAN01",
+    "name_fr": "Médecine + Sciences Biologiques (Université d'Alger 1)"
+  },
+  {
+    "code": "PF0LAN01",
+    "name_fr": "Médecine + Sciences Économiques"
+  },
+  {
+    "code": "PF0LAN02",
+    "name_fr": "Médecine + Sciences Économiques"
+  },
+  {
+    "code": "PF0LAN03",
+    "name_fr": "Médecine + Sciences Économiques"
+  },
+  {
+    "code": "PI0LAN01",
+    "name_fr": "Médecine + Psychologie"
+  },
+  {
+    "code": "W01SANTE",
+    "name_fr": "Sage-Femme de Santé Publique"
+  },
+  {
+    "code": "X01SANTE",
+    "name_fr": "Infirmiers de Santé Publique"
+  },
+  {
+    "code": "X02SANTE",
+    "name_fr": "Diététiciens de Santé Publique"
+  },
+  {
+    "code": "X03SANTE",
+    "name_fr": "Prothésistes Dentaires de Santé Publique"
+  },
+  {
+    "code": "X04SANTE",
+    "name_fr": "Kinésithérapeutes de Santé Publique"
+  },
+  {
+    "code": "X05SANTE",
+    "name_fr": "Pédicure-Podologue de Santé Publique"
+  },
+  {
+    "code": "X06SANTE",
+    "name_fr": "Ergothérapeutes de Santé Publique"
+  },
+  {
+    "code": "X07SANTE",
+    "name_fr": "Appareilleurs Orthopédistes de Santé Publique"
+  },
+  {
+    "code": "X08SANTE",
+    "name_fr": "Psychomotriciens de Santé Publique"
+  },
+  {
+    "code": "X09SANTE",
+    "name_fr": "Manipulateurs en Imagerie Médicale de Santé Publique"
+  },
+  {
+    "code": "X10SANTE",
+    "name_fr": "Laborantins de Santé Publique"
+  },
+  {
+    "code": "X11SANTE",
+    "name_fr": "Préparateurs en Pharmacie de Santé Publique"
+  },
+  {
+    "code": "X12SANTE",
+    "name_fr": "Hygiénistes de Santé Publique"
+  },
+  {
+    "code": "X13SANTE",
+    "name_fr": "Assistants Médicaux de Santé Publique"
+  },
+  {
+    "code": "X14SANTE",
+    "name_fr": "Assistants Sociaux de Santé Publique"
+  }
+]

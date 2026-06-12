@@ -1,0 +1,312 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-arabic), var(--font-inter);
+  --font-sans: var(--font-inter), 'Inter Fallback', system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback', monospace;
+  --font-arabic: 'Noto Sans Arabic', var(--font-inter), system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.25);
+  --radius-2xl: calc(var(--radius) * 1.5);
+}
+
+:root {
+  /* Masarek Official Brand Colors - Algerian Identity */
+  --background: #F4F6F9;
+  --foreground: #0B2340;
+  --card: #FFFFFF;
+  --card-foreground: #0B2340;
+  --popover: #FFFFFF;
+  --popover-foreground: #0B2340;
+  
+  /* Primary: Algerian Flag Green */
+  --primary: #006233;
+  --primary-foreground: #FFFFFF;
+  
+  /* Secondary: Accent Red */
+  --secondary: #D21034;
+  --secondary-foreground: #FFFFFF;
+  
+  --muted: #F4F6F9;
+  --muted-foreground: #64748B;
+  
+  /* Accent: Academic Gold */
+  --accent: #C8A84B;
+  --accent-foreground: #0B2340;
+  
+  /* Gold for achievements/badges */
+  --gold: #C8A84B;
+  --gold-foreground: #0B2340;
+  
+  --destructive: #DC2626;
+  --success: #10B981;
+  --success-foreground: #FFFFFF;
+  --warning: #F59E0B;
+  --warning-foreground: #0B2340;
+  
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #006233;
+  
+  /* Charts use brand colors */
+  --chart-1: #006233;
+  --chart-2: #D21034;
+  --chart-3: #C8A84B;
+  --chart-4: #10B981;
+  --chart-5: #0B2340;
+  
+  --radius: 12px;
+  
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0B2340;
+  --sidebar-primary: #006233;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F4F6F9;
+  --sidebar-accent-foreground: #0B2340;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #006233;
+}
+
+.dark {
+  --background: #0B2340;
+  --foreground: #F4F6F9;
+  --card: #132B4A;
+  --card-foreground: #F4F6F9;
+  --popover: #132B4A;
+  --popover-foreground: #F4F6F9;
+  --primary: #10B981;
+  --primary-foreground: #0B2340;
+  --secondary: #E63950;
+  --secondary-foreground: #FFFFFF;
+  --muted: #1E3A5F;
+  --muted-foreground: #94A3B8;
+  --accent: #D4B85C;
+  --accent-foreground: #0B2340;
+  --gold: #D4B85C;
+  --gold-foreground: #0B2340;
+  --destructive: #EF4444;
+  --success: #34D399;
+  --success-foreground: #0B2340;
+  --warning: #FBBF24;
+  --warning-foreground: #0B2340;
+  --border: #1E3A5F;
+  --input: #1E3A5F;
+  --ring: #10B981;
+  --chart-1: #10B981;
+  --chart-2: #E63950;
+  --chart-3: #D4B85C;
+  --chart-4: #34D399;
+  --chart-5: #F4F6F9;
+  --sidebar: #132B4A;
+  --sidebar-foreground: #F4F6F9;
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: #0B2340;
+  --sidebar-accent: #1E3A5F;
+  --sidebar-accent-foreground: #F4F6F9;
+  --sidebar-border: #1E3A5F;
+  --sidebar-ring: #10B981;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    line-height: 1.7;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-foreground;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Arabic text styling */
+.font-arabic {
+  font-family: 'Noto Sans Arabic', var(--font-sans);
+  line-height: 1.8;
+}
+
+/* Smooth transitions */
+.transition-theme {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Glass morphism effect - ONLY for hero overlay cards */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass {
+  background: rgba(19, 43, 74, 0.85);
+  border: 1px solid rgba(30, 58, 95, 0.8);
+}
+
+/* Brand gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #006233 0%, #004d28 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #D21034 0%, #b80d2c 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #C8A84B 0%, #b8983d 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, #F4F6F9 0%, rgba(0, 98, 51, 0.05) 50%, rgba(200, 168, 75, 0.03) 100%);
+}
+
+.dark .gradient-hero {
+  background: linear-gradient(180deg, #0B2340 0%, rgba(16, 185, 129, 0.1) 50%, rgba(212, 184, 92, 0.05) 100%);
+}
+
+/* Official card styling */
+.card-official {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(11, 35, 64, 0.04), 0 1px 2px rgba(11, 35, 64, 0.02);
+}
+
+.dark .card-official {
+  background: #132B4A;
+  border: 1px solid #1E3A5F;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Button variants following brand */
+.btn-primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-foreground hover:bg-muted;
+}
+
+/* Badge styling for achievements */
+.badge-gold {
+  background: linear-gradient(135deg, #C8A84B 0%, #D4B85C 100%);
+  color: #0B2340;
+}
+
+/* Progress bar styling */
+.progress-primary {
+  @apply bg-primary;
+}
+
+.progress-gold {
+  background: linear-gradient(90deg, #C8A84B 0%, #D4B85C 100%);
+}
+
+/* Spacing grid - 8px base */
+.space-grid-1 { gap: 8px; }
+.space-grid-2 { gap: 16px; }
+.space-grid-3 { gap: 24px; }
+.space-grid-4 { gap: 32px; }
+.space-grid-5 { gap: 40px; }
+
+/* Animation utilities */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out forwards;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
