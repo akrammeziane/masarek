@@ -1,7 +1,6 @@
-
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { Card, CardContent } from '@/components/ui/card'
@@ -33,11 +32,6 @@ type University = {
   domains: string[]
 }
 
-// FIX: Hardcoded universities array removed — data is now passed via props from the server page
-//       which calls getUniversitiesCatalogue() (all 269 official entries, no cap).
-
-
-// ALL_WILAYAS is now derived inside the component from the prop; see below
 const ALL_TYPES = [
   { value: 'all', labelAr: 'الكل' },
   { value: 'جامعة', labelAr: 'جامعات' },
@@ -59,7 +53,7 @@ const typeColorMap: Record<string, string> = {
   'مدرسة عليا': 'bg-[#0B2340]/10 text-[#0B2340]',
 }
 
-export function UniversitiesContent({ universities: universitiesData }: { universities: University[] }) {
+function UniversitiesInner({ universities: universitiesData }: { universities: University[] }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedWilaya, setSelectedWilaya] = useState('الكل')
   const [selectedType, setSelectedType] = useState('all')
@@ -67,7 +61,6 @@ export function UniversitiesContent({ universities: universitiesData }: { univer
   const searchParams = useSearchParams()
   const fromDashboard = searchParams.get('from') === 'dashboard'
 
-  // FIX: derive wilayas from live prop data (not the old hardcoded array)
   const ALL_WILAYAS_DYNAMIC = ['الكل', ...Array.from(new Set(universitiesData.map(u => u.wilaya))).sort((a, b) => a.localeCompare(b, 'ar'))]
 
   const filteredUniversities = universitiesData.filter((uni) => {
@@ -85,7 +78,6 @@ export function UniversitiesContent({ universities: universitiesData }: { univer
   return (
     <div className="min-h-screen bg-[#F4F6F9]" dir="rtl">
 
-      {/* ── NAVBAR ── */}
       {fromDashboard ? (
         <header className="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-[#E2E8F0] shadow-sm">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -114,13 +106,11 @@ export function UniversitiesContent({ universities: universitiesData }: { univer
       )}
 
       <main className="max-w-6xl mx-auto px-4 py-8">
-        {/* Page Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-[#0B2340] mb-2">الجامعات الجزائرية</h1>
           <p className="text-gray-500">تصفح {universitiesData.length} مؤسسة جامعية مع تخصصاتها المتاحة</p>
         </div>
 
-        {/* Filters */}
         <Card className="mb-6 border border-[#E2E8F0]">
           <CardContent className="p-4">
             <div className="flex flex-col md:flex-row gap-3 flex-wrap">
@@ -198,7 +188,6 @@ export function UniversitiesContent({ universities: universitiesData }: { univer
                   </span>
                 </div>
 
-                {/* Key Specialties */}
                 <div className="mb-3">
                   <p className="text-xs text-gray-400 mb-1.5">أبرز التخصصات:</p>
                   <div className="flex flex-wrap gap-1.5">
@@ -213,7 +202,6 @@ export function UniversitiesContent({ universities: universitiesData }: { univer
                   </div>
                 </div>
 
-                {/* Domain tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {uni.domains.slice(0, 2).map(d => (
                     <Badge key={d} className="text-xs bg-[#006233]/8 text-[#006233] border-0 py-0">
@@ -248,5 +236,13 @@ export function UniversitiesContent({ universities: universitiesData }: { univer
 
       {!fromDashboard && <PublicFooter />}
     </div>
+  )
+}
+
+export function UniversitiesContent({ universities }: { universities: University[] }) {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#F4F6F9]" />}>
+      <UniversitiesInner universities={universities} />
+    </Suspense>
   )
 }
