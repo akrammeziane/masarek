@@ -40,13 +40,13 @@ const bacSeriesLabels: Record<string, string> = {
 
 type SpecialtyItem = {
   id: string
-  codes?: string[]                    // every raw MESRS code grouped under this name
+  codes?: string[]
   nameAr: string
   nameFr: string
   fieldAr: string
   domain: string
-  minGrade: number | null             // null = unknown threshold
-  universitiesCount?: number          // # of universities offering this specialty
+  minGrade: number | null
+  universitiesCount?: number
   durationYears: number
   careerPaths: string[]
   descriptionAr: string
@@ -58,22 +58,24 @@ interface ExplorerContentProps {
 }
 
 const DOMAIN_FIELDS = [
-  { value: 'all', labelAr: 'جميع المجالات' },
-  { value: 'العلوم والتكنولوجيا', labelAr: 'العلوم والتكنولوجيا' },
-  { value: 'الفنون والهندسة', labelAr: 'الفنون والهندسة' },
-  { value: 'العلوم الطبية', labelAr: 'العلوم الطبية' },
-  { value: 'العلوم الاقتصادية والتجارية', labelAr: 'العلوم الاقتصادية والتجارية' },
-  { value: 'العلوم القانونية والسياسية', labelAr: 'العلوم القانونية والسياسية' },
-  { value: 'الآداب واللغات', labelAr: 'الآداب واللغات' },
-  { value: 'العلوم الاجتماعية والإنسانية', labelAr: 'العلوم الاجتماعية والإنسانية' },
-  { value: 'العلوم الأساسية', labelAr: 'العلوم الأساسية' },
-  { value: 'العلوم الزراعية والبيئية', labelAr: 'العلوم الزراعية والبيئية' },
-  { value: 'الفنون والرياضة', labelAr: 'الفنون والرياضة' },
-  { value: 'العلوم الإسلامية', labelAr: 'العلوم الإسلامية' },
+  { value: 'all',                            labelAr: 'جميع المجالات' },
+  { value: 'العلوم والتكنولوجيا',            labelAr: 'العلوم والتكنولوجيا' },
+  { value: 'علوم المادة',                    labelAr: 'علوم المادة' },
+  { value: 'الرياضيات والإعلام الآلي',       labelAr: 'الرياضيات والإعلام الآلي' },
+  { value: 'علوم الطبيعة والحياة',           labelAr: 'علوم الطبيعة والحياة' },
+  { value: 'علوم الأرض',                    labelAr: 'علوم الأرض' },
+  { value: 'العلوم الاقتصادية والتسيير',     labelAr: 'العلوم الاقتصادية والتسيير' },
+  { value: 'الحقوق والعلوم السياسية',        labelAr: 'الحقوق والعلوم السياسية' },
+  { value: 'اللغات والترجمة',               labelAr: 'اللغات والترجمة' },
+  { value: 'العلوم الإنسانية والاجتماعية',   labelAr: 'العلوم الإنسانية والاجتماعية' },
+  { value: 'النشاطات البدنية والرياضية',     labelAr: 'النشاطات البدنية والرياضية' },
+  { value: 'الفنون',                        labelAr: 'الفنون' },
+  { value: 'الآداب العربية',                labelAr: 'الآداب العربية' },
+  { value: 'الآداب',                        labelAr: 'الآداب' },
+  { value: 'العمارة والعمران',              labelAr: 'العمارة والعمران' },
+  { value: 'العلوم الطبية',                 labelAr: 'العلوم الطبية' },
 ]
 
-/** Final client-side guard: collapse any accidental duplicates that slip through
- *  (defense-in-depth — server already dedupes by canonical name). */
 function dedupByCanonical(list: SpecialtyItem[]): SpecialtyItem[] {
   const seen = new Map<string, SpecialtyItem>()
   for (const s of list) {
@@ -83,7 +85,6 @@ function dedupByCanonical(list: SpecialtyItem[]): SpecialtyItem[] {
     if (!key) continue
     const prev = seen.get(key)
     if (!prev) { seen.set(key, s); continue }
-    // Merge: keep lower minGrade, sum universitiesCount, union codes.
     const merged: SpecialtyItem = {
       ...prev,
       codes: Array.from(new Set([...(prev.codes ?? []), ...(s.codes ?? [])])),
@@ -116,7 +117,11 @@ export function ExplorerContent({ specialties }: ExplorerContentProps) {
         spec.nameAr.includes(searchQuery) ||
         spec.nameFr.toLowerCase().includes(q) ||
         spec.descriptionAr.includes(searchQuery)
-      const matchesField = selectedField === 'all' || spec.fieldAr === selectedField
+      const matchesField =
+        selectedField === 'all' ||
+        spec.fieldAr === selectedField ||
+        spec.fieldAr?.includes(selectedField) ||
+        selectedField?.includes(spec.fieldAr)
       return matchesSearch && matchesField
     })
     .sort((a, b) => {
@@ -173,10 +178,12 @@ export function ExplorerContent({ specialties }: ExplorerContentProps) {
           </p>
         </div>
 
+        {/* Filters */}
         <Card className="mb-6 border border-[#E2E8F0]">
           <CardContent className="p-4">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="relative flex-1">
+            <div className="flex flex-col gap-3">
+              {/* Search */}
+              <div className="relative">
                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <Input
                   placeholder="ابحث عن تخصص..."
@@ -185,26 +192,42 @@ export function ExplorerContent({ specialties }: ExplorerContentProps) {
                   className="pr-10 border-[#E2E8F0]"
                 />
               </div>
-              <Select value={selectedField} onValueChange={setSelectedField}>
-                <SelectTrigger className="w-full md:w-64 border-[#E2E8F0]">
-                  <Filter className="w-4 h-4 ml-2 text-gray-400" />
-                  <SelectValue placeholder="المجال" />
-                </SelectTrigger>
-                <SelectContent>
-                  {DOMAIN_FIELDS.map((field) => (
-                    <SelectItem key={field.value} value={field.value}>
-                      {field.labelAr}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Tabs value={sortBy} onValueChange={setSortBy} className="hidden md:block">
-                <TabsList>
-                  <TabsTrigger value="name">الاسم</TabsTrigger>
-                  <TabsTrigger value="score">المعدل</TabsTrigger>
-                  <TabsTrigger value="duration">المدة</TabsTrigger>
-                </TabsList>
-              </Tabs>
+              {/* Field filter + sort */}
+              <div className="flex gap-3">
+                <Select value={selectedField} onValueChange={(v) => v && setSelectedField(v)}>
+                  <SelectTrigger className="flex-1 border-[#E2E8F0]">
+                    <Filter className="w-4 h-4 ml-2 text-gray-400 shrink-0" />
+                    <SelectValue placeholder="المجال" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {DOMAIN_FIELDS.map((field) => (
+                      <SelectItem key={field.value} value={field.value}>
+                        {field.labelAr}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Tabs value={sortBy} onValueChange={setSortBy} className="hidden md:block shrink-0">
+                  <TabsList>
+                    <TabsTrigger value="name">الاسم</TabsTrigger>
+                    <TabsTrigger value="score">المعدل</TabsTrigger>
+                    <TabsTrigger value="duration">المدة</TabsTrigger>
+                  </TabsList>
+                </Tabs>
+              </div>
+              {/* Mobile sort */}
+              <div className="md:hidden">
+                <Select value={sortBy} onValueChange={(v) => v && setSortBy(v)}>
+                  <SelectTrigger className="w-full border-[#E2E8F0]">
+                    <SelectValue placeholder="ترتيب حسب" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="name">ترتيب حسب الاسم</SelectItem>
+                    <SelectItem value="score">ترتيب حسب المعدل</SelectItem>
+                    <SelectItem value="duration">ترتيب حسب المدة</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -226,7 +249,9 @@ export function ExplorerContent({ specialties }: ExplorerContentProps) {
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-base text-[#0B2340] leading-tight">{spec.nameAr}</h3>
-                    <p className="text-xs text-gray-400 mt-0.5 truncate">{spec.nameFr}</p>
+                    {spec.nameFr && spec.nameFr !== spec.nameAr && (
+                      <p className="text-xs text-gray-400 mt-0.5 truncate">{spec.nameFr}</p>
+                    )}
                   </div>
                   <button
                     onClick={(e) => { e.stopPropagation(); toggleSave(spec.id) }}
@@ -338,7 +363,14 @@ export function ExplorerContent({ specialties }: ExplorerContentProps) {
 
         {filteredSpecs.length === 0 && (
           <div className="text-center py-12">
+            <Search className="w-12 h-12 text-gray-300 mx-auto mb-3" />
             <p className="text-gray-400">لا توجد نتائج تطابق بحثك</p>
+            <button
+              onClick={() => { setSearchQuery(''); setSelectedField('all') }}
+              className="mt-3 text-sm text-[#006233] hover:underline"
+            >
+              مسح الفلاتر
+            </button>
           </div>
         )}
       </main>

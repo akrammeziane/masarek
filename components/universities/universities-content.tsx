@@ -10,7 +10,7 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from '@/components/ui/select'
 import {
-  Search, MapPin, ExternalLink, Building2, Filter, LayoutDashboard, GraduationCap,
+  Search, MapPin, ExternalLink, Building2, LayoutDashboard, GraduationCap,
 } from 'lucide-react'
 import { PublicNavbar } from '@/components/public-navbar'
 import { PublicFooter } from '@/components/public-footer'
@@ -27,8 +27,14 @@ function MasarekLogo({ size = 38 }: { size?: number }) {
 }
 
 type University = {
-  id: number; nameAr: string; nameFr: string; wilaya: string; type: string
-  website: string; specialtiesCount: number; keySpecialties: string[]
+  id: number
+  nameAr: string
+  nameFr: string
+  wilaya: string
+  type: string
+  website: string
+  specialtiesCount: number
+  keySpecialties: string[]
   domains: string[]
 }
 
@@ -36,43 +42,39 @@ const ALL_TYPES = [
   { value: 'all', labelAr: 'الكل' },
   { value: 'جامعة', labelAr: 'جامعات' },
   { value: 'مدرسة عليا', labelAr: 'مدارس عليا' },
-]
-const ALL_DOMAINS = [
-  { value: 'all', labelAr: 'جميع التخصصات' },
-  { value: 'العلوم والتكنولوجيا', labelAr: 'العلوم والتكنولوجيا' },
-  { value: 'العلوم الطبية', labelAr: 'العلوم الطبية' },
-  { value: 'العلوم الاقتصادية والتجارية', labelAr: 'العلوم الاقتصادية' },
-  { value: 'العلوم القانونية', labelAr: 'العلوم القانونية' },
-  { value: 'الآداب واللغات', labelAr: 'الآداب واللغات' },
-  { value: 'العلوم الاجتماعية والإنسانية', labelAr: 'العلوم الاجتماعية' },
-  { value: 'العلوم الإسلامية', labelAr: 'العلوم الإسلامية' },
+  { value: 'مؤسسة جامعية', labelAr: 'مؤسسات جامعية' },
 ]
 
 const typeColorMap: Record<string, string> = {
   'جامعة': 'bg-[#006233]/10 text-[#006233]',
   'مدرسة عليا': 'bg-[#0B2340]/10 text-[#0B2340]',
+  'مؤسسة جامعية': 'bg-[#C8A84B]/10 text-[#C8A84B]',
 }
 
 function UniversitiesInner({ universities: universitiesData }: { universities: University[] }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedWilaya, setSelectedWilaya] = useState('الكل')
   const [selectedType, setSelectedType] = useState('all')
-  const [selectedDomain, setSelectedDomain] = useState('all')
   const searchParams = useSearchParams()
   const fromDashboard = searchParams.get('from') === 'dashboard'
 
-  const ALL_WILAYAS_DYNAMIC = ['الكل', ...Array.from(new Set(universitiesData.map(u => u.wilaya))).sort((a, b) => a.localeCompare(b, 'ar'))]
+  // Derive wilayas dynamically from real data
+  const ALL_WILAYAS_DYNAMIC = [
+    'الكل',
+    ...Array.from(new Set(universitiesData.map(u => u.wilaya).filter(Boolean)))
+      .sort((a, b) => a.localeCompare(b, 'ar'))
+  ]
 
   const filteredUniversities = universitiesData.filter((uni) => {
     const q = searchQuery.toLowerCase()
     const matchesSearch =
       uni.nameAr.includes(searchQuery) ||
       uni.nameFr.toLowerCase().includes(q) ||
+      uni.wilaya.toLowerCase().includes(q) ||
       uni.keySpecialties.some(s => s.includes(searchQuery))
     const matchesWilaya = selectedWilaya === 'الكل' || uni.wilaya === selectedWilaya
     const matchesType = selectedType === 'all' || uni.type === selectedType
-    const matchesDomain = selectedDomain === 'all' || uni.domains.some(d => d.includes(selectedDomain.replace('العلوم الاقتصادية', 'الاقتصاد')))
-    return matchesSearch && matchesWilaya && matchesType && matchesDomain
+    return matchesSearch && matchesWilaya && matchesType
   })
 
   return (
@@ -89,12 +91,7 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
               </div>
             </Link>
             <Link href="/dashboard">
-              <button className="
-                inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold
-                border border-[#006233] text-[#006233]
-                hover:bg-[#006233] hover:text-white
-                transition-all duration-200
-              ">
+              <button className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold border border-[#006233] text-[#006233] hover:bg-[#006233] hover:text-white transition-all duration-200">
                 <LayoutDashboard className="w-4 h-4" />
                 العودة للوحة التحكم
               </button>
@@ -106,56 +103,51 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
       )}
 
       <main className="max-w-6xl mx-auto px-4 py-8">
+        {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-[#0B2340] mb-2">الجامعات الجزائرية</h1>
           <p className="text-gray-500">تصفح {universitiesData.length} مؤسسة جامعية مع تخصصاتها المتاحة</p>
         </div>
 
+        {/* Filters */}
         <Card className="mb-6 border border-[#E2E8F0]">
           <CardContent className="p-4">
-            <div className="flex flex-col md:flex-row gap-3 flex-wrap">
-              <div className="relative flex-1 min-w-48">
+            <div className="flex flex-col gap-3">
+              {/* Search */}
+              <div className="relative">
                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <Input
-                  placeholder="ابحث بالاسم أو التخصص..."
+                  placeholder="ابحث بالاسم أو الولاية أو التخصص..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pr-10 border-[#E2E8F0]"
                 />
               </div>
-              <Select value={selectedWilaya} onValueChange={setSelectedWilaya}>
-                <SelectTrigger className="w-full md:w-44 border-[#E2E8F0]">
-                  <MapPin className="w-4 h-4 ml-2 text-gray-400" />
-                  <SelectValue placeholder="الولاية" />
-                </SelectTrigger>
-                <SelectContent>
-                  {ALL_WILAYAS_DYNAMIC.map(w => (
-                    <SelectItem key={w} value={w}>{w}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Select value={selectedType} onValueChange={setSelectedType}>
-                <SelectTrigger className="w-full md:w-44 border-[#E2E8F0]">
-                  <Building2 className="w-4 h-4 ml-2 text-gray-400" />
-                  <SelectValue placeholder="النوع" />
-                </SelectTrigger>
-                <SelectContent>
-                  {ALL_TYPES.map(t => (
-                    <SelectItem key={t.value} value={t.value}>{t.labelAr}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Select value={selectedDomain} onValueChange={setSelectedDomain}>
-                <SelectTrigger className="w-full md:w-52 border-[#E2E8F0]">
-                  <GraduationCap className="w-4 h-4 ml-2 text-gray-400" />
-                  <SelectValue placeholder="مجال التخصص" />
-                </SelectTrigger>
-                <SelectContent>
-                  {ALL_DOMAINS.map(d => (
-                    <SelectItem key={d.value} value={d.value}>{d.labelAr}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              {/* Wilaya + Type */}
+              <div className="flex gap-3">
+                <Select value={selectedWilaya} onValueChange={(v) => v && setSelectedWilaya(v)}>
+                  <SelectTrigger className="flex-1 border-[#E2E8F0]">
+                    <MapPin className="w-4 h-4 ml-2 text-gray-400 shrink-0" />
+                    <SelectValue placeholder="الولاية" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {ALL_WILAYAS_DYNAMIC.map(w => (
+                      <SelectItem key={w} value={w}>{w}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select value={selectedType} onValueChange={(v) => v && setSelectedType(v)}>
+                  <SelectTrigger className="flex-1 border-[#E2E8F0]">
+                    <Building2 className="w-4 h-4 ml-2 text-gray-400 shrink-0" />
+                    <SelectValue placeholder="النوع" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {ALL_TYPES.map(t => (
+                      <SelectItem key={t.value} value={t.value}>{t.labelAr}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -172,7 +164,9 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-bold text-sm text-[#0B2340] leading-tight">{uni.nameAr}</h3>
-                    <p className="text-xs text-gray-400 mt-0.5 truncate">{uni.nameFr}</p>
+                    {uni.nameFr && uni.nameFr !== uni.nameAr && (
+                      <p className="text-xs text-gray-400 mt-0.5 truncate">{uni.nameFr}</p>
+                    )}
                   </div>
                 </div>
 
@@ -188,27 +182,31 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
                   </span>
                 </div>
 
-                <div className="mb-3">
-                  <p className="text-xs text-gray-400 mb-1.5">أبرز التخصصات:</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {uni.keySpecialties.slice(0, 4).map(s => (
-                      <Badge key={s} variant="outline" className="text-xs border-[#E2E8F0] text-[#0B2340] py-0">
-                        {s}
+                {uni.keySpecialties.length > 0 && (
+                  <div className="mb-3">
+                    <p className="text-xs text-gray-400 mb-1.5">أبرز التخصصات:</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {uni.keySpecialties.slice(0, 4).map(s => (
+                        <Badge key={s} variant="outline" className="text-xs border-[#E2E8F0] text-[#0B2340] py-0">
+                          {s}
+                        </Badge>
+                      ))}
+                      {uni.keySpecialties.length > 4 && (
+                        <span className="text-xs text-gray-400 self-center">+{uni.keySpecialties.length - 4}</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {uni.domains.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {uni.domains.slice(0, 2).map(d => (
+                      <Badge key={d} className="text-xs bg-[#006233]/8 text-[#006233] border-0 py-0">
+                        {d}
                       </Badge>
                     ))}
-                    {uni.keySpecialties.length > 4 && (
-                      <span className="text-xs text-gray-400 self-center">+{uni.keySpecialties.length - 4}</span>
-                    )}
                   </div>
-                </div>
-
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {uni.domains.slice(0, 2).map(d => (
-                    <Badge key={d} className="text-xs bg-[#006233]/8 text-[#006233] border-0 py-0">
-                      {d}
-                    </Badge>
-                  ))}
-                </div>
+                )}
 
                 {uni.website && (
                   <a
@@ -216,6 +214,7 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs text-[#006233] hover:text-[#004d28] font-medium transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
                     زيارة الموقع الرسمي
@@ -230,6 +229,12 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
           <div className="text-center py-12">
             <Building2 className="w-12 h-12 text-gray-300 mx-auto mb-3" />
             <p className="text-gray-400">لا توجد نتائج تطابق بحثك</p>
+            <button
+              onClick={() => { setSearchQuery(''); setSelectedWilaya('الكل'); setSelectedType('all') }}
+              className="mt-3 text-sm text-[#006233] hover:underline"
+            >
+              مسح الفلاتر
+            </button>
           </div>
         )}
       </main>
