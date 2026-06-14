@@ -45,10 +45,10 @@ export default function ForgotPasswordPage() {
           <div className="bg-[#006233]/5 border border-[#006233]/20 rounded-xl p-5 mb-6">
             <p className="text-sm text-[#0B2340] font-semibold mb-2">للمساعدة، تواصل معنا:</p>
             <a
-              href="mailto:support@masarek.dz"
+              href="mailto:mezianeakram757@gmail.com"
               className="text-[#006233] text-sm font-medium hover:underline block mb-1"
             >
-              support@masarek.dz
+              support@masarek.dz"
             </a>
             <p className="text-xs text-gray-400 mt-2">
               أرسل لنا إيميلك المسجّل وسنساعدك على استعادة حسابك خلال 24 ساعة.

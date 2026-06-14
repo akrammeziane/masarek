@@ -122,13 +122,13 @@ export function PublicFooter() {
             <h4 className="font-bold text-white/90 mb-4 text-sm uppercase tracking-wide">تواصل معنا</h4>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:contact@masarek.dz"
+                <a href="mailto:mezianeakram757@gmail.com"
                   className="flex items-center gap-2 text-white/55 text-sm hover:text-white transition-colors">
-                  <Mail className="w-4 h-4 shrink-0 text-[#C8A84B]" /> contact@masarek.dz
+                  <Mail className="w-4 h-4 shrink-0 text-[#C8A84B]" /> contact@masarek.dz"
                 </a>
               </li>
               <li>
-                <a href="https://masarek.dz"
+                <a href="https://masarek-xmxt.vercel.app/"
                   className="flex items-center gap-2 text-white/55 text-sm hover:text-white transition-colors">
                   <Globe className="w-4 h-4 shrink-0 text-[#C8A84B]" /> masarek.dz
                 </a>
