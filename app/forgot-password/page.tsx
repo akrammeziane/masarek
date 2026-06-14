@@ -48,7 +48,7 @@ export default function ForgotPasswordPage() {
               href="mailto:mezianeakram757@gmail.com"
               className="text-[#006233] text-sm font-medium hover:underline block mb-1"
             >
-              support@masarek.dz"
+              support@masarek.dz
             </a>
             <p className="text-xs text-gray-400 mt-2">
               أرسل لنا إيميلك المسجّل وسنساعدك على استعادة حسابك خلال 24 ساعة.

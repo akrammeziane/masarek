@@ -124,7 +124,7 @@ export function PublicFooter() {
               <li>
                 <a href="mailto:mezianeakram757@gmail.com"
                   className="flex items-center gap-2 text-white/55 text-sm hover:text-white transition-colors">
-                  <Mail className="w-4 h-4 shrink-0 text-[#C8A84B]" /> contact@masarek.dz"
+                  <Mail className="w-4 h-4 shrink-0 text-[#C8A84B]" /> contact@masarek.dz
                 </a>
               </li>
               <li>
