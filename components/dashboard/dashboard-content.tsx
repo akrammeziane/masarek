@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState } from 'react'
@@ -86,7 +87,7 @@ export function DashboardContent({ user, profile, recommendations }: DashboardCo
       <aside className={`
         fixed md:relative z-40 md:z-auto
         ${sidebarOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'}
-        right-0 top-0 h-full
+        right-0 top-0 h-full md:h-screen md:sticky md:top-0
         w-64 md:w-60
         bg-[#0B2340] text-white flex flex-col
         transition-transform duration-300
@@ -235,7 +236,7 @@ export function DashboardContent({ user, profile, recommendations }: DashboardCo
                 <Card key={s.label} className="border-[#E2E8F0] overflow-hidden">
                   <div className="h-1" style={{ backgroundColor: s.color }} />
                   <CardContent className="p-3">
-                    <div className="text-sm font-bold leading-tight break-words" style={{ color: s.color }}>{s.value}</div>
+                    <div className="text-sm font-bold leading-tight wrap-break-word" style={{ color: s.color }}>{s.value}</div>
                     <div className="text-xs text-gray-500 mt-0.5">{s.label}</div>
                   </CardContent>
                 </Card>

@@ -1,3 +1,4 @@
+
 'use client'
 
 import { Suspense, useState } from 'react'
@@ -45,6 +46,28 @@ const ALL_TYPES = [
   { value: 'مؤسسة جامعية', labelAr: 'مؤسسات جامعية' },
 ]
 
+// FIX: deriveUniversityTypeAr() (in app/actions/student.ts) can return one of
+// 9 specific Arabic labels. The filter UI only exposes 3 broad categories, so
+// we map every specific label to the matching broad category here before
+// comparing against `selectedType`. Without this, types like
+// 'مدرسة عليا للأساتذة', 'مدرسة وطنية', 'مركز جامعي', 'معهد وطني',
+// 'مدرسة/معهد' never matched any filter option and returned 0 results.
+const TYPE_GROUP_MAP: Record<string, string> = {
+  'جامعة': 'جامعة',
+  'مدرسة عليا': 'مدرسة عليا',
+  'مدرسة عليا للأساتذة': 'مدرسة عليا',
+  'مدرسة وطنية متعددة التقنيات': 'مدرسة عليا',
+  'مدرسة وطنية': 'مدرسة عليا',
+  'مدرسة/معهد': 'مدرسة عليا',
+  'مركز جامعي': 'مؤسسة جامعية',
+  'معهد وطني': 'مؤسسة جامعية',
+  'مؤسسة جامعية': 'مؤسسة جامعية',
+}
+
+function getTypeGroup(type: string): string {
+  return TYPE_GROUP_MAP[type] ?? 'مؤسسة جامعية'
+}
+
 const typeColorMap: Record<string, string> = {
   'جامعة': 'bg-[#006233]/10 text-[#006233]',
   'مدرسة عليا': 'bg-[#0B2340]/10 text-[#0B2340]',
@@ -73,7 +96,7 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
       uni.wilaya.toLowerCase().includes(q) ||
       uni.keySpecialties.some(s => s.includes(searchQuery))
     const matchesWilaya = selectedWilaya === 'الكل' || uni.wilaya === selectedWilaya
-    const matchesType = selectedType === 'all' || uni.type === selectedType
+    const matchesType = selectedType === 'all' || getTypeGroup(uni.type) === selectedType
     return matchesSearch && matchesWilaya && matchesType
   })
 
@@ -171,7 +194,7 @@ function UniversitiesInner({ universities: universitiesData }: { universities: U
                 </div>
 
                 <div className="flex items-center gap-3 mb-3 flex-wrap">
-                  <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold ${typeColorMap[uni.type] ?? 'bg-gray-100 text-gray-600'}`}>
+                  <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold ${typeColorMap[getTypeGroup(uni.type)] ?? 'bg-gray-100 text-gray-600'}`}>
                     {uni.type}
                   </span>
                   <span className="flex items-center gap-1 text-xs text-gray-500">

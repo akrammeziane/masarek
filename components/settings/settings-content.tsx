@@ -13,7 +13,7 @@ import { Badge } from '@/components/ui/badge'
 import {
   Settings, LogOut, ChevronLeft, ChevronRight, LayoutDashboard, Brain,
   Compass, Building2, TrendingUp, User, BookOpen, RefreshCw, Shield,
-  CheckCircle, AlertTriangle, Loader2, MapPin, GraduationCap,
+  CheckCircle, AlertTriangle, Loader2, MapPin, GraduationCap, X, Menu,
 } from 'lucide-react'
 
 function MasarekLogo({ size = 38 }: { size?: number }) {
@@ -75,6 +75,7 @@ type Tab = 'profile' | 'assessment' | 'account'
 export function SettingsContent({ user, profile, canRetake = true, hoursLeft = 0, attemptsLeft = 2, attemptsUsed = 0 }: SettingsContentProps) {
   const router = useRouter()
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
   const [activeTab, setActiveTab] = useState<Tab>('profile')
 
   // Profile form state
@@ -123,18 +124,42 @@ export function SettingsContent({ user, profile, canRetake = true, hoursLeft = 0
 
   return (
     <div className="flex min-h-screen bg-[#F4F6F9]" dir="rtl">
+
+      {/* ── MOBILE OVERLAY ── */}
+      {mobileSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          onClick={() => setMobileSidebarOpen(false)}
+        />
+      )}
+
       {/* ── SIDEBAR ── */}
-      <aside className={`${sidebarOpen ? 'w-60' : 'w-16'} shrink-0 bg-[#0B2340] text-white flex flex-col transition-all duration-300 relative`}>
+      <aside className={`
+        fixed md:relative z-40 md:z-auto
+        ${mobileSidebarOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'}
+        right-0 top-0 h-full md:h-screen md:sticky md:top-0
+        w-60 ${sidebarOpen ? 'md:w-60' : 'md:w-16'}
+        shrink-0 bg-[#0B2340] text-white flex flex-col transition-all duration-300
+      `}>
+        {/* Close button — mobile only */}
+        <button
+          onClick={() => setMobileSidebarOpen(false)}
+          className="absolute left-3 top-3 md:hidden w-8 h-8 bg-white/10 rounded-full flex items-center justify-center"
+        >
+          <X className="w-4 h-4 text-white" />
+        </button>
+
+        {/* Collapse toggle — desktop only */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="absolute -left-3 top-20 w-6 h-6 bg-[#006233] rounded-full flex items-center justify-center z-10 shadow-md"
+          className="hidden md:flex absolute -left-3 top-20 w-6 h-6 bg-[#006233] rounded-full items-center justify-center z-10 shadow-md"
         >
           {sidebarOpen ? <ChevronRight className="w-3 h-3 text-white" /> : <ChevronLeft className="w-3 h-3 text-white" />}
         </button>
 
-        <div className="p-4 flex items-center gap-2 border-b border-white/10">
+        <div className="p-4 flex items-center gap-2 border-b border-white/10 mt-2 md:mt-0">
           <div className="shrink-0"><MasarekLogo size={36} /></div>
-          {sidebarOpen && (
+          {(sidebarOpen || mobileSidebarOpen) && (
             <div>
               <span className="font-bold text-lg leading-none">مساركَ</span>
               <span className="text-xs text-white/50 block leading-none">Masarek.dz</span>
@@ -142,12 +167,12 @@ export function SettingsContent({ user, profile, canRetake = true, hoursLeft = 0
           )}
         </div>
 
-        <div className={`p-4 border-b border-white/10 ${sidebarOpen ? '' : 'flex justify-center'}`}>
-          <div className={`flex items-center gap-3 ${!sidebarOpen ? 'justify-center' : ''}`}>
+        <div className={`p-4 border-b border-white/10 ${!sidebarOpen ? 'md:flex md:justify-center' : ''}`}>
+          <div className={`flex items-center gap-3 ${!sidebarOpen ? 'md:justify-center' : ''}`}>
             <Avatar className="w-9 h-9 shrink-0">
               <AvatarFallback className="bg-[#006233] text-white text-sm font-bold">{user.name.charAt(0)}</AvatarFallback>
             </Avatar>
-            {sidebarOpen && (
+            {(sidebarOpen || mobileSidebarOpen) && (
               <div className="min-w-0 flex-1">
                 <div className="font-semibold text-sm truncate">{user.name}</div>
                 {profile.wilaya && (
@@ -163,12 +188,13 @@ export function SettingsContent({ user, profile, canRetake = true, hoursLeft = 0
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setMobileSidebarOpen(false)}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group ${
                 item.active ? 'bg-white/15 text-white' : 'hover:bg-white/10 text-white/80'
-              } ${!sidebarOpen ? 'justify-center' : ''}`}
+              } ${!sidebarOpen ? 'md:justify-center' : ''}`}
             >
               <item.icon className="w-4 h-4 shrink-0" />
-              {sidebarOpen && <span className="text-sm">{item.label}</span>}
+              {(sidebarOpen || mobileSidebarOpen) && <span className="text-sm">{item.label}</span>}
             </Link>
           ))}
         </nav>
@@ -176,27 +202,36 @@ export function SettingsContent({ user, profile, canRetake = true, hoursLeft = 0
         <div className="p-3 border-t border-white/10">
           <button
             onClick={() => signOut()}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-red-500/20 text-white/60 hover:text-[#D21034] transition-colors w-full ${!sidebarOpen ? 'justify-center' : ''}`}
+            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-red-500/20 text-white/60 hover:text-[#D21034] transition-colors w-full ${!sidebarOpen ? 'md:justify-center' : ''}`}
           >
             <LogOut className="w-4 h-4 shrink-0" />
-            {sidebarOpen && <span className="text-sm">تسجيل الخروج</span>}
+            {(sidebarOpen || mobileSidebarOpen) && <span className="text-sm">تسجيل الخروج</span>}
           </button>
         </div>
       </aside>
 
       {/* ── MAIN ── */}
-      <main className="flex-1 overflow-auto">
-        <header className="bg-white border-b border-[#E2E8F0] px-6 py-3 flex items-center justify-between sticky top-0 z-10">
-          <div className="flex items-center gap-2">
-            <Settings className="w-4 h-4 text-[#006233]" />
-            <span className="font-semibold text-[#0B2340]">الإعدادات</span>
+      <main className="flex-1 overflow-auto min-w-0">
+        <header className="bg-white border-b border-[#E2E8F0] px-4 md:px-6 py-3 flex items-center justify-between sticky top-0 z-10">
+          <div className="flex items-center gap-3">
+            {/* Hamburger — mobile only */}
+            <button
+              onClick={() => setMobileSidebarOpen(true)}
+              className="md:hidden w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100"
+            >
+              <Menu className="w-5 h-5 text-gray-600" />
+            </button>
+            <div className="flex items-center gap-2">
+              <Settings className="w-4 h-4 text-[#006233]" />
+              <span className="font-semibold text-[#0B2340]">الإعدادات</span>
+            </div>
           </div>
           <Avatar className="w-8 h-8">
             <AvatarFallback className="bg-[#006233] text-white text-xs font-bold">{user.name.charAt(0)}</AvatarFallback>
           </Avatar>
         </header>
 
-        <div className="p-6 max-w-3xl">
+        <div className="p-4 md:p-6 max-w-3xl">
           {/* Tabs */}
           <div className="flex gap-1 bg-white border border-[#E2E8F0] rounded-xl p-1 mb-6 w-fit">
             {TABS.map((t) => (

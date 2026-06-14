@@ -568,6 +568,7 @@ const WILAYA_AR: Record<string, string> = {
   'Tiaret': 'تيارت', 'Tindouf': 'تندوف', 'Tipaza': 'تيبازة',
   'Tissemsilt': 'تيسمسيلت', 'Tizi Ouzou': 'تيزي وزو',
   'Tlemcen': 'تلمسان',
+  'Touggourt': 'تقرت',
 }
 
 function buildUniversitiesCatalogue(): UniversityCatalogItem[] {
@@ -1396,7 +1397,38 @@ export async function resetAssessment() {
 
 // ─── GET RECOMMENDATIONS ──────────────────────────────────────────────────────
 
-export async function getUserRecommendations() {
+// FIX: Defined explicitly (instead of deriving via Awaited<ReturnType<typeof getUserRecommendations>>)
+// to break the circular type reference — getUserRecommendations() casts the cached JSON to
+// RecommendationItem[], so a type derived from its own return type creates a cycle (TS2456),
+// and without an explicit annotation TS also can't infer the return type (TS7023).
+export interface RecommendationItem {
+  id: number
+  matchScore: number
+  rank: number
+  uiKey: string
+  specId: string
+  nameAr: string
+  nameFr: string
+  displayName: string
+  etablissementDisplay: string
+  fieldAr: string
+  fieldFr: string
+  domain: string
+  etablissement: string
+  code_etablissement: string
+  durationYears: number
+  minGrade: number | null
+  careerPaths: string[]
+  descriptionAr: string
+  admissionPriority: number | null
+  studentScore: number
+  margin: number | null
+  reasons: string[]
+  usedML: boolean
+  createdAt: Date
+}
+
+export async function getUserRecommendations(): Promise<RecommendationItem[]> {
   const userId = await getUserId()
 
   const profile = await getStudentProfile()
@@ -1500,8 +1532,6 @@ export async function getUserRecommendations() {
 
   return deduped
 }
-
-export type RecommendationItem = Awaited<ReturnType<typeof getUserRecommendations>>[number]
 
 // ─── GET ASSESSMENT ANSWERS ───────────────────────────────────────────────────
 
